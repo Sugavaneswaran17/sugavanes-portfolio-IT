@@ -1,362 +1,352 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio of Sugavaneswaran R</title>
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
-    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfolio of Sugavaneswaran R</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+  <style>
+    * {
+      font-family: 'Poppins', sans-serif;
+      scroll-behavior: smooth;
+    }
+
+    .glass {
+      backdrop-filter: blur(16px);
+      background: rgba(255, 255, 255, 0.08);
+    }
+
+    .glow:hover {
+      box-shadow: 0 0 30px rgba(99, 102, 241, 0.35);
+      transform: translateY(-6px);
+    }
+
+    .gradient-text {
+      background: linear-gradient(90deg, #38bdf8, #818cf8, #c084fc);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+  </style>
 </head>
 
-<body class="bg-gradient-to-r from-blue-500 to-purple-500 min-h-screen">
+<body class="bg-slate-950 text-white overflow-x-hidden">
 
+  <!-- Background Effects -->
+  <div class="fixed inset-0 -z-10">
+    <div class="absolute top-0 left-0 w-72 h-72 bg-cyan-500/20 rounded-full blur-3xl"></div>
+    <div class="absolute top-40 right-10 w-80 h-80 bg-violet-500/20 rounded-full blur-3xl"></div>
+    <div class="absolute bottom-10 left-1/3 w-96 h-96 bg-fuchsia-500/10 rounded-full blur-3xl"></div>
+  </div>
 
-<header class="bg-gray-800">
-    <div class="container mx-auto flex justify-between items-center py-4">
+  <!-- Header -->
+  <header class="sticky top-0 z-50 border-b border-white/10 bg-slate-950/80 backdrop-blur-xl">
+    <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+      <div>
+        <h1 class="text-xl md:text-2xl font-bold tracking-wide">SUGAVANESWARAN <span class="text-cyan-400">R</span></h1>
+        <p class="text-sm text-slate-300">Python Full Stack Developer (Fresher)</p>
+      </div>
+
+      <nav>
+        <div class="hidden md:flex items-center gap-6 text-sm font-medium">
+          <a href="#home" class="hover:text-cyan-400 transition">Home</a>
+          <a href="#about" class="hover:text-cyan-400 transition">About</a>
+          <a href="#projects" class="hover:text-cyan-400 transition">Projects</a>
+          <a href="#skills" class="hover:text-cyan-400 transition">Skills</a>
+          <a href="#contact" class="hover:text-cyan-400 transition">Contact</a>
+          <a href="sugavaneswaran_CV1.pdf" download class="px-5 py-2 rounded-full bg-gradient-to-r from-cyan-500 to-indigo-500 hover:scale-105 transition shadow-lg">Download CV</a>
+        </div>
+
+        <button id="menuBtn" class="md:hidden text-3xl">
+          <ion-icon name="menu-outline"></ion-icon>
+        </button>
+      </nav>
+    </div>
+
+    <div id="mobileMenu" class="hidden md:hidden px-6 pb-4">
+      <div class="glass rounded-2xl p-5 flex flex-col gap-4 border border-white/10">
+        <a href="#home" class="hover:text-cyan-400">Home</a>
+        <a href="#about" class="hover:text-cyan-400">About</a>
+        <a href="#projects" class="hover:text-cyan-400">Projects</a>
+        <a href="#skills" class="hover:text-cyan-400">Skills</a>
+        <a href="#contact" class="hover:text-cyan-400">Contact</a>
+        <a href="sugavaneswaran_CV1.pdf" download class="text-center px-5 py-2 rounded-full bg-gradient-to-r from-cyan-500 to-indigo-500">Download CV</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section id="home" class="max-w-7xl mx-auto px-6 py-20 md:py-28">
+    <div class="grid md:grid-cols-2 gap-10 items-center">
+      <div>
+        <p class="uppercase tracking-[0.3em] text-cyan-400 text-sm mb-4">Welcome to my portfolio</p>
+        <h2 class="text-4xl md:text-6xl font-extrabold leading-tight mb-5">
+          Hi, I'm <span class="gradient-text">Sugavaneswaran R</span>
+        </h2>
+        <p class="text-lg md:text-xl text-slate-300 mb-6">Python Full Stack Developer & Web Developer from India</p>
+        <p class="text-slate-400 leading-8 mb-8">
+          I create clean, responsive, and user-friendly websites and web applications. I’m a fresher passionate about building real-world projects and growing my career in software development.
+        </p>
+
+        <div class="flex flex-wrap gap-4">
+          <a href="#projects" class="px-6 py-3 rounded-full bg-gradient-to-r from-cyan-500 to-indigo-500 font-semibold hover:scale-105 transition">View Projects</a>
+          <a href="#contact" class="px-6 py-3 rounded-full border border-white/20 hover:border-cyan-400 hover:text-cyan-400 transition">Hire Me</a>
+        </div>
+
+        <div class="grid grid-cols-3 gap-4 mt-10">
+          <div class="glass border border-white/10 rounded-2xl p-4 text-center">
+            <h3 class="text-2xl font-bold text-cyan-400">3+</h3>
+            <p class="text-sm text-slate-300">Projects</p>
+          </div>
+          <div class="glass border border-white/10 rounded-2xl p-4 text-center">
+            <h3 class="text-2xl font-bold text-cyan-400">6+</h3>
+            <p class="text-sm text-slate-300">Skills</p>
+          </div>
+          <div class="glass border border-white/10 rounded-2xl p-4 text-center">
+            <h3 class="text-2xl font-bold text-cyan-400">100%</h3>
+            <p class="text-sm text-slate-300">Passion</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="flex justify-center">
+        <div class="relative">
+          <div class="absolute inset-0 rounded-[2rem] bg-gradient-to-r from-cyan-500 to-violet-500 blur-2xl opacity-30"></div>
+          <img src="images2.jpg" alt="Profile Image" class="relative w-72 h-72 md:w-96 md:h-96 object-cover rounded-[2rem] border-4 border-white/10 shadow-2xl">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section id="about" class="max-w-7xl mx-auto px-6 py-10">
+    <div class="glass border border-white/10 rounded-3xl p-8 md:p-12 shadow-2xl">
+      <div class="grid md:grid-cols-2 gap-10 items-center">
         <div>
-            <h1 class="text-white text-xl font-bold">SUGAVANESWARAN R</h1>
-            <p class="text-gray-400 text-sm">Python Full Stack Developer</p>
+          <img src="images1.jpg" alt="About Image" class="w-full max-w-md mx-auto rounded-3xl border border-white/10 shadow-xl object-cover">
         </div>
-<nav>
-    <div class="nav-links absolute bg-white md:min-h-fit min-h-[50vh] right-0 top-[-100%] md:w-auto w-full items-center px-5 transition-transform duration-300 ease-in-out">
-        <ul class="flex md:flex-row flex-col md:items-center gap-[4vw] gap-8">
-            <li><a class="hover:text-gray" href="#home">Home</a></li>
-            <li><a class="hover:text-gray" href="#about">About</a></li>
-            <li><a class="hover:text-gray" href="#projects">Projects</a></li>
-            <li><a class="hover:text-gray" href="#skills">Skills</a></li>
-            <li><a class="hover:text-gray" href="#contact">Contact</a></li>
-            <a href="sugavaneswaran_CV1.pdf" download class="btn"><button class="bg-[#a6clee] text-white px-5 py-2 rounded-full bg-[#87aced]">Download CV</button></a>
-        </ul>
+
+        <div>
+          <p class="text-cyan-400 font-semibold mb-2">ABOUT ME</p>
+          <h2 class="text-3xl md:text-4xl font-bold mb-5">Building modern web experiences</h2>
+          <p class="text-slate-300 leading-8 mb-4">
+            I am a Python full stack developer (basics) with strong interest in building responsive and practical web applications.
+          </p>
+          <p class="text-slate-400 leading-8 mb-4">
+            My journey is driven by continuous learning, problem-solving, and improving my development skills through real-time projects.
+          </p>
+          <p class="text-slate-400 leading-8 mb-6">
+            I’m currently looking for opportunities as a fresher where I can contribute, learn, and grow professionally.
+          </p>
+
+          <div class="grid sm:grid-cols-2 gap-4">
+            <div class="bg-white/5 rounded-2xl p-4 border border-white/10">
+              <p class="text-sm text-slate-400">Role</p>
+              <p class="font-semibold">Python Full Stack Developer</p>
+            </div>
+            <div class="bg-white/5 rounded-2xl p-4 border border-white/10">
+              <p class="text-sm text-slate-400">Location</p>
+              <p class="font-semibold">Salem, Tamil Nadu</p>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-     <div class="flex items-center gap-6"></div>
-        <ion-icon onclick="onToggleMenu(this)" name="menu" class="text-3xl bg-[#FFFFFF] cursor-pointer"></ion-icon>
+  </section>
+
+  <!-- Projects -->
+  <section id="projects" class="max-w-7xl mx-auto px-6 py-16">
+    <div class="text-center mb-12">
+      <p class="text-cyan-400 font-semibold">MY WORK</p>
+      <h2 class="text-3xl md:text-4xl font-bold">Featured Projects</h2>
+      <p class="text-slate-400 mt-3">A few projects that showcase my skills and creativity.</p>
     </div>
-</nav>
 
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <div class="glass border border-white/10 rounded-3xl p-5 transition duration-300 glow">
+        <img src="images8.jpg" alt="Railway Reservation Project" class="rounded-2xl mb-5 h-52 w-full object-cover">
+        <span class="inline-block text-xs px-3 py-1 rounded-full bg-cyan-500/10 text-cyan-300 border border-cyan-400/20 mb-3">Django</span>
+        <h3 class="text-xl font-bold mb-2">Railway Reservation System</h3>
+        <p class="text-slate-400 mb-4">A web application to manage railway ticket booking and reservation workflow.</p>
+        <a href="https://github.com/Sugavaneswaran17/Railway-Reservation-system" target="_blank" class="text-cyan-400 font-semibold hover:underline">View Project</a>
+      </div>
+
+      <div class="glass border border-white/10 rounded-3xl p-5 transition duration-300 glow">
+        <img src="images14.jpg" alt="Weather App Project" class="rounded-2xl mb-5 h-52 w-full object-cover">
+        <span class="inline-block text-xs px-3 py-1 rounded-full bg-violet-500/10 text-violet-300 border border-violet-400/20 mb-3">JavaScript</span>
+        <h3 class="text-xl font-bold mb-2">Weather App</h3>
+        <p class="text-slate-400 mb-4">A weather forecast web app that fetches live weather data with a clean user interface.</p>
+        <a href="https://github.com/Sugavaneswaran17/weather-app" target="_blank" class="text-cyan-400 font-semibold hover:underline">View Project</a>
+      </div>
+
+      <div class="glass border border-white/10 rounded-3xl p-5 transition duration-300 glow">
+        <img src="images7.jpg" alt="Currency Converter Project" class="rounded-2xl mb-5 h-52 w-full object-cover">
+        <span class="inline-block text-xs px-3 py-1 rounded-full bg-pink-500/10 text-pink-300 border border-pink-400/20 mb-3">HTML / CSS</span>
+        <h3 class="text-xl font-bold mb-2">Currency Converter</h3>
+        <p class="text-slate-400 mb-4">A responsive currency converter website designed with a simple and interactive UI.</p>
+        <a href="https://github.com/Sugavaneswaran17/currency-converter" target="_blank" class="text-cyan-400 font-semibold hover:underline">View Project</a>
+      </div>
     </div>
-</header>
+  </section>
 
-<script>
-    const navLinks = document.querySelector('.nav-links');
-    function onToggleMenu(e) {
-        e.name = e.name === 'menu' ? 'close' : 'menu';
-        navLinks.classList.toggle('top-16'); // Change this to your desired position
-    }
-</script>
-
-
-
-<!-- Introduction Section -->
-    <section id="home" class="text-center p-8 bg-white rounded-lg shadow-lg mx-4 mt-8 md:mx-20">
-        <img src="images2.jpg" alt="Profile Image" class="mx-auto mb-4 rounded-circle w-32 h-32">
-        <h1 class="text-2xl font-bold text-black-1000 mb-2">Hello, I'm SUGAVANESWARAN R</h1>
-        <p class="text-black-800 text-lg mb-4">Web Developer from India</p>
-        <p class="text-black-800 mb-4">I create and maintain websites and web applications, ensuring they are functional, user-friendly, and visually appealing.</p>
-    </section>
-
-  <!-- About Section -->
-<section id="about" class="bg-white py-8 rounded-lg shadow-lg mx-4 md:mx-20 mt-8">
-    <div class="container mx-auto flex flex-col md:flex-row items-center text-center md:text-left">
-        <div class="md:w-1/2 mb-10 md:mb-4">
-            <img src="images1.jpg" alt="Your Picture" class="rounded-circle mx-auto md:mx-10 md:w-2/1">
-        </div>
-        <div class="md:w-1/2">
-            <h2 class="text-black-1000 text-2x3 font-bold mb-4">About Me</h2>
-            <p class="text-black-800 mb-4">
-               I am a Python full stack developer (basics) with a knack for creating seamless web applications.
-                With experience in various programming languages and frameworks,<br>I thrive on turning ideas into reality. 
-                My journey in tech has been driven by my love<br>for problem-solving and my commitment to continuous learning.
-            </p>
-            <p class="text-black-800 mb-4">
-                I enjoy collaborating with cross-functional teams to create innovative solutions<br>that enhance user experiences.
-                Outside of coding, I love exploring new technologies, participating in hackathons,<br>and sharing knowledge within the developer community.
-            </p>
-            <p class="text-black-800 mb-4">
-                I’m currently seeking new challenges and opportunities to grow further in my <br>career while contributing to exciting projects.
-            </p>
-        </div>
+  <!-- Skills -->
+  <section id="skills" class="max-w-7xl mx-auto px-6 py-16">
+    <div class="text-center mb-12">
+      <p class="text-cyan-400 font-semibold">MY SKILLS</p>
+      <h2 class="text-3xl md:text-4xl font-bold">Technologies I Use</h2>
+      <p class="text-slate-400 mt-3">I develop my skills regularly to become a better developer.</p>
     </div>
-</section>
 
+    <div class="grid md:grid-cols-2 gap-6">
+      <div class="glass border border-white/10 rounded-3xl p-6">
+        <div class="flex justify-between mb-2"><span>HTML</span><span class="text-cyan-400">95%</span></div>
+        <div class="w-full bg-white/10 rounded-full h-3 mb-5"><div class="bg-gradient-to-r from-cyan-400 to-blue-500 h-3 rounded-full" style="width:95%"></div></div>
 
+        <div class="flex justify-between mb-2"><span>CSS</span><span class="text-cyan-400">75%</span></div>
+        <div class="w-full bg-white/10 rounded-full h-3 mb-5"><div class="bg-gradient-to-r from-cyan-400 to-blue-500 h-3 rounded-full" style="width:75%"></div></div>
 
+        <div class="flex justify-between mb-2"><span>JavaScript</span><span class="text-cyan-400">70%</span></div>
+        <div class="w-full bg-white/10 rounded-full h-3"><div class="bg-gradient-to-r from-cyan-400 to-blue-500 h-3 rounded-full" style="width:70%"></div></div>
+      </div>
 
-    <!-- Portfolio Section -->
-    <section id="projects" class="container mx-auto py-8">
-        <h2 class="text-black-800 text-2xl font-bold mb-4 text-center">Portfolio</h2>
-        <p class="text-center text-black-600 mb-8">My Amazing Works</p>
-        <div class="flex flex-wrap -mx-4">
-            <!-- Project Item -->
-            <div class="w-full md:w-1/2 lg:w-1/3 px-4 mb-8">
-                <div class="bg-gray-900 p-4 rounded-lg">
-                    <img src="images8.jpg" alt="Project Image" class="rounded-lg mb-4">
-                    <h3 class="text-red-500 text-lg font-bold mb-2">Django</h3>
-                    <p class="text-gray-300 mb-4">Web Application for Railway Reservation</p>
-                    <a href="https://github.com/Sugavaneswaran17/Railway-Reservation-system" class="text-red-500 hover:underline">VIEW PROJECT</a>
-                </div>
-            </div>
+      <div class="glass border border-white/10 rounded-3xl p-6">
+        <div class="flex justify-between mb-2"><span>Python</span><span class="text-cyan-400">70%</span></div>
+        <div class="w-full bg-white/10 rounded-full h-3 mb-5"><div class="bg-gradient-to-r from-violet-400 to-fuchsia-500 h-3 rounded-full" style="width:70%"></div></div>
 
-            <!-- Repeat for other projects -->
-            <div class="w-full md:w-1/2 lg:w-1/3 px-4 mb-8">
-                <div class="bg-gray-900 p-4 rounded-lg">
-                    <img src="images14.jpg" height="-200" alt="Project Image" class="rounded-lg mb-4">
-                    <h3 class="text-red-500 text-lg font-bold mb-2">JavaScript</h3>
-                    <p class="text-gray-300 mb-4">Web Application for Weather-app</p>
-                    <a href="https://github.com/Sugavaneswaran17/weather-app" class="text-red-500 hover:underline">VIEW PROJECT</a>
-                </div>
-            </div>
+        <div class="flex justify-between mb-2"><span>Django</span><span class="text-cyan-400">70%</span></div>
+        <div class="w-full bg-white/10 rounded-full h-3 mb-5"><div class="bg-gradient-to-r from-violet-400 to-fuchsia-500 h-3 rounded-full" style="width:70%"></div></div>
 
-            <!-- Add more project items in similar blocks -->
-            <div class="w-full md:w-1/2 lg:w-1/3 px-4 mb-8">
-                <div class="bg-gray-900 p-4 rounded-lg">
-                    <img src="images7.jpg" alt="Project Image" class="rounded-lg mb-4">
-                    <h3 class="text-red-500 text-lg font-bold mb-2">HTML CSS </h3>
-                    <p class="text-gray-300 mb-4">Currency converter Website</p>
-                    <a href="https://github.com/Sugavaneswaran17/currency-converter" class="text-red-500 hover:underline">VIEW PROJECT</a>
-                </div>
-            </div>
+        <div class="flex justify-between mb-2"><span>SQL</span><span class="text-cyan-400">70%</span></div>
+        <div class="w-full bg-white/10 rounded-full h-3"><div class="bg-gradient-to-r from-violet-400 to-fuchsia-500 h-3 rounded-full" style="width:70%"></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Special Added Section -->
+  <section class="max-w-7xl mx-auto px-6 py-8">
+    <div class="grid md:grid-cols-3 gap-6">
+      <div class="glass border border-white/10 rounded-3xl p-6 text-center">
+        <i class="fa-solid fa-code text-3xl text-cyan-400 mb-4"></i>
+        <h3 class="font-bold text-xl mb-2">Clean Code</h3>
+        <p class="text-slate-400 text-sm">I focus on readable, maintainable, and efficient code for better project quality.</p>
+      </div>
+
+      <div class="glass border border-white/10 rounded-3xl p-6 text-center">
+        <i class="fa-solid fa-mobile-screen-button text-3xl text-violet-400 mb-4"></i>
+        <h3 class="font-bold text-xl mb-2">Responsive Design</h3>
+        <p class="text-slate-400 text-sm">My websites are optimized for desktop, tablet, and mobile devices.</p>
+      </div>
+
+      <div class="glass border border-white/10 rounded-3xl p-6 text-center">
+        <i class="fa-solid fa-lightbulb text-3xl text-pink-400 mb-4"></i>
+        <h3 class="font-bold text-xl mb-2">Creative Solutions</h3>
+        <p class="text-slate-400 text-sm">I enjoy solving problems with simple and effective web development solutions.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="max-w-7xl mx-auto px-6 py-16">
+    <div class="grid lg:grid-cols-2 gap-8 items-start">
+      <div>
+        <p class="text-cyan-400 font-semibold mb-2">CONTACT ME</p>
+        <h2 class="text-3xl md:text-4xl font-bold mb-4">Let's build something great together</h2>
+        <p class="text-slate-400 mb-8 leading-8">If you have an internship, fresher opportunity, or project collaboration, feel free to contact me.</p>
+
+        <div class="space-y-4">
+          <div class="glass border border-white/10 rounded-2xl p-4 flex items-center gap-4">
+            <i class="fa-solid fa-envelope text-cyan-400"></i>
+            <span>sugavanesraja6598@gmail.com</span>
+          </div>
+
+          <div class="glass border border-white/10 rounded-2xl p-4 flex items-center gap-4">
+            <i class="fa-solid fa-phone text-cyan-400"></i>
+            <span>+91 6383938287</span>
+          </div>
+
+          <div class="glass border border-white/10 rounded-2xl p-4 flex items-center gap-4">
+            <i class="fa-solid fa-location-dot text-cyan-400"></i>
+            <span>Salem, Tamil Nadu, India</span>
+          </div>
         </div>
-    </section>
+      </div>
 
-    <!-- Skills Section -->
-    <section id="skills" class="container mx-auto py-8">
-        <h2 class="text-black-800 text-2xl font-bold mb-4 text-center">My Skills</h2>
-        <p class="text-center text-black-600 mb-8">I Develop Skills Regularly</p>
-        <div class="flex flex-wrap -mx-4">
-            <!-- Skill Item -->
-            <div class="w-full md:w-1/2 lg:w-1/3 px-4 mb-4">
-                <div class="bg-gray-900 p-4 rounded-lg">
-                    <h3 class="text-red-500 text-lg font-bold mb-2">HTML</h3>
-                    <div class="relative pt-1">
-                        <div class="flex mb-2 items-center justify-between">
-                            <div class="text-right">
-                                <span class="text-xs font-semibold inline-block text-red-500">95%</span>
-                            </div>
-                        </div>
-                        <div class="overflow-hidden h-2 mb-4 text-xs flex rounded bg-red-200">
-                            <div style="width:95%" class="shadow-none flex flex-col text-center whitespace-nowrap text-white justify-center bg-red-500"></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+      <form action="https://api.web3forms.com/submit" method="POST" class="glass border border-white/10 rounded-3xl p-6 shadow-2xl">
+        <input type="hidden" name="access_key" value="YOUR_WEB3FORMS_ACCESS_KEY">
 
-            <!-- Repeat for other skills -->
-            <div class="w-full md:w-1/2 lg:w-1/3 px-4 mb-4">
-                <div class="bg-gray-900 p-4 rounded-lg">
-                    <h3 class="text-red-500 text-lg font-bold mb-2">CSS</h3>
-                    <div class="relative pt-1">
-                        <div class="flex mb-2 items-center justify-between">
-                            <div class="text-right">
-                                <span class="text-xs font-semibold inline-block text-red-500">75%</span>
-                            </div>
-                        </div>
-                        <div class="overflow-hidden h-2 mb-4 text-xs flex rounded bg-red-200">
-                            <div style="width:75%" class="shadow-none flex flex-col text-center whitespace-nowrap text-white justify-center bg-red-500"></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Add more skills in similar blocks -->
-            <div class="w-full md:w-1/2 lg:w-1/3 px-4 mb-4">
-                <div class="bg-gray-900 p-4 rounded-lg">
-                    <h3 class="text-red-500 text-lg font-bold mb-2">JavaScript</h3>
-                    <div class="relative pt-1">
-                        <div class="flex mb-2 items-center justify-between">
-                            <div class="text-right">
-                                <span class="text-xs font-semibold inline-block text-red-500">70%</span>
-                            </div>
-                        </div>
-                        <div class="overflow-hidden h-2 mb-4 text-xs flex rounded bg-red-200">
-                            <div style="width:70%" class="shadow-none flex flex-col text-center whitespace-nowrap text-white justify-center bg-red-500"></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="w-full md:w-1/2 lg:w-1/3 px-4 mb-4">
-                <div class="bg-gray-900 p-4 rounded-lg">
-                    <h3 class="text-red-500 text-lg font-bold mb-2">Python</h3>
-                    <div class="relative pt-1">
-                        <div class="flex mb-2 items-center justify-between">
-                            <div class="text-right">
-                                <span class="text-xs font-semibold inline-block text-red-500">70%</span>
-                            </div>
-                        </div>
-                        <div class="overflow-hidden h-2 mb-4 text-xs flex rounded bg-red-200">
-                            <div style="width:70%" class="shadow-none flex flex-col text-center whitespace-nowrap text-white justify-center bg-red-500"></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="w-full md:w-1/2 lg:w-1/3 px-4 mb-4">
-                <div class="bg-gray-900 p-4 rounded-lg">
-                    <h3 class="text-red-500 text-lg font-bold mb-2">Django</h3>
-                    <div class="relative pt-1">
-                        <div class="flex mb-2 items-center justify-between">
-                            <div class="text-right">
-                                <span class="text-xs font-semibold inline-block text-red-500">70%</span>
-                            </div>
-                        </div>
-                        <div class="overflow-hidden h-2 mb-4 text-xs flex rounded bg-red-200">
-                            <div style="width:70%" class="shadow-none flex flex-col text-center whitespace-nowrap text-white justify-center bg-red-500"></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="w-full md:w-1/2 lg:w-1/3 px-4 mb-4">
-                <div class="bg-gray-900 p-4 rounded-lg">
-                    <h3 class="text-red-500 text-lg font-bold mb-2">SQL</h3>
-                    <div class="relative pt-1">
-                        <div class="flex mb-2 items-center justify-between">
-                            <div class="text-right">
-                                <span class="text-xs font-semibold inline-block text-red-500">70%</span>
-                            </div>
-                        </div>
-                        <div class="overflow-hidden h-2 mb-4 text-xs flex rounded bg-red-200">
-                            <div style="width:70%" class="shadow-none flex flex-col text-center whitespace-nowrap text-white justify-center bg-red-500"></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-<section id="contact" class="container mx-auto py-8">
-    <h2 class="text-black-800 text-2xl font-bold mb-4 text-center">Contact Me</h2>
-    <p class="text-center text-black-600 mb-8">Get in Touch!</p>
-    <form action="https://api.web3forms.com/submit" method="POST" class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
-        <input type="hidden" name="access_key" value="b1a0fc4d-94eb-4507-952d-31ebb68cb48f">
         <div class="mb-4">
-            <label class="block text-black-700 text-sm font-bold mb-2" for="Name">Name</label>
-            <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="Name" type="text" name="name" placeholder="Your Name" required>
+          <label class="block text-sm mb-2">Name</label>
+          <input type="text" name="name" required placeholder="Your Name" class="w-full rounded-xl bg-white/5 border border-white/10 px-4 py-3 outline-none focus:border-cyan-400">
         </div>
+
         <div class="mb-4">
-            <label class="block text-black-700 text-sm font-bold mb-2" for="Email">Email</label>
-            <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="Email" type="email" name="email" placeholder="Your Email" required>
+          <label class="block text-sm mb-2">Email</label>
+          <input type="email" name="email" required placeholder="Your Email" class="w-full rounded-xl bg-white/5 border border-white/10 px-4 py-3 outline-none focus:border-cyan-400">
         </div>
+
         <div class="mb-6">
-            <label class="block text-black-700 text-sm font-bold mb-2" for="Message">Message</label>
-            <textarea class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="Message" name="message" placeholder="Your Message" required></textarea>
-        </div>
-        <div class="flex items-center justify-between">
-            <button type="submit" class="btn bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">
-                Send Message
-            </button>
-        </div>
-    </form>
-</section>
-
-
-    
-<footer class="bg-gray-800 text-gray-300 mt-12 py-8">
-    <div class="container mx-auto flex flex-wrap">
-        <!-- About Me Section -->
-        <div class="w-full md:w-1/3 px-4 mb-4 md:mb-0">
-            <h3 class="text-lg font-bold mb-2">Address</h3>
-            <ul class="list-reset text-sm">
-                <li class="mb-2">
-                    <ion-icon name="navigate-circle-outline"></ion-icon>
-                    3/85 Karapaga Vinayagar St,
-                </li>
-                <li class="mb-2">
-                    <i class="fas fa-map-marker-alt mr-2"></i>
-                    <n>Vattamuthampatti,
-                </li>
-                <li class="mb-2">
-                    <i class="fas fa-map-marker-alt mr-2"></i>
-                    S.Kollapatty, Salem-30
-                </li>
-            </ul>
+          <label class="block text-sm mb-2">Message</label>
+          <textarea name="message" rows="5" required placeholder="Your Message" class="w-full rounded-xl bg-white/5 border border-white/10 px-4 py-3 outline-none focus:border-cyan-400"></textarea>
         </div>
 
-        <!-- Contact Me Section -->
-        <div class="w-full md:w-1/3 px-4 mb-4 md:mb-0">
-            <h3 class="text-lg font-bold mb-2">Contact Me</h3>
-            <ul class="list-reset text-sm">
-                <li class="mb-2">
-                    <a href="mailto:sugavanesraja6598@gmail.com" target="_blank" class="flex items-center">
-                        <i class="fas fa-envelope mr-2"></i><ion-icon name="mail-outline"></ion-icon>
-                         sugavanesraja6598@gmail.com
-                    </a>
-                </li>
-                <li class="mb-2">
-                    <a href="tel:+91 6383938287" target="_blank" class="flex items-center">
-                        <i class="fas fa-phone mr-2"></i><ion-icon name="call-outline"></ion-icon>
-                        +91 6383938287
-                    </a>
-                </li>
-                <li class="mb-2"></li>
-                    <a href="https://maps.app.goo.gl/waGFnSG9jgb43F3BA" target="_blank" class="flex items-center">
-                        <i class="fas fa-map-marker-alt mr-2"></i><ion-icon name="location-outline"></ion-icon>
-                        Salem, Tamil Nadu, India
-                    </a>
-                </li>
-            </ul>
-        </div>
+        <button type="submit" class="w-full py-3 rounded-xl bg-gradient-to-r from-cyan-500 to-indigo-500 font-semibold hover:scale-[1.02] transition">
+          Send Message
+        </button>
+      </form>
+    </div>
+  </section>
 
-        <!-- Social Media Section -->
-        <div class="w-full md:w-1/3 px-4 mb-4 md:mb-0">
-            <h3 class="text-lg font-bold mb-2">Social Media</h3>
-            <ul class="list-reset text-sm">
-                <li class="mb-2">
-                    <a href="https://www.facebook.com" target="_blank" class="flex items-center">
-                        <i class="fab fa-facebook mr-2"></i><ion-icon name="logo-facebook"></ion-icon>
-                        Facebook
-                    </a>
-                </li>
-                <li class="mb-2">
-                    <a href="https://www.twitter.com" target="_blank" class="flex items-center">
-                        <i class="fab fa-twitter mr-2"></i><ion-icon name="logo-twitter"></ion-icon>
-                        Twitter
-                    </a>
-                </li>
-                <li class="mb-2">
-                    <a href="https://github.com/Sugavaneswaran17" target="_blank" class="flex items-center">
-                        <i class="fab fa-github mr-2"></i><ion-icon name="logo-github"></ion-icon>
-                        GitHub
-                    </a>
-                </li>
-                <li class="mb-2">
-                    <a href="https://www.linkedin.com/in/sugavaneswaran-sugavanes-896687269/" target="_blank" class="flex items-center">
-                        <i class="fab fa-linkedin mr-2"></i><ion-icon name="logo-linkedin"></ion-icon>
-                        LinkedIn
-                    </a>
-                </li>
-            </ul>
+  <!-- Footer -->
+  <footer class="border-t border-white/10 mt-10">
+    <div class="max-w-7xl mx-auto px-6 py-10 grid md:grid-cols-3 gap-8">
+      <div>
+        <h3 class="font-bold text-lg mb-4">Address</h3>
+        <p class="text-slate-400 text-sm leading-7">
+          3/85 Karapaga Vinayagar St,<br>
+          Vattamuthampatti,<br>
+          S. Kollapatty, Salem - 30
+        </p>
+      </div>
+
+      <div>
+        <h3 class="font-bold text-lg mb-4">Quick Links</h3>
+        <div class="flex flex-col gap-2 text-slate-400 text-sm">
+          <a href="#home" class="hover:text-cyan-400">Home</a>
+          <a href="#about" class="hover:text-cyan-400">About</a>
+          <a href="#projects" class="hover:text-cyan-400">Projects</a>
+          <a href="#contact" class="hover:text-cyan-400">Contact</a>
         </div>
+      </div>
+
+      <div>
+        <h3 class="font-bold text-lg mb-4">Social Media</h3>
+        <div class="flex gap-4 text-xl">
+          <a href="https://github.com/Sugavaneswaran17" target="_blank" class="w-11 h-11 rounded-full bg-white/5 border border-white/10 flex items-center justify-center hover:text-cyan-400 hover:border-cyan-400 transition"><i class="fab fa-github"></i></a>
+          <a href="https://www.linkedin.com/in/sugavaneswaran-sugavanes-896687269/" target="_blank" class="w-11 h-11 rounded-full bg-white/5 border border-white/10 flex items-center justify-center hover:text-cyan-400 hover:border-cyan-400 transition"><i class="fab fa-linkedin-in"></i></a>
+          <a href="mailto:sugavanesraja6598@gmail.com" class="w-11 h-11 rounded-full bg-white/5 border border-white/10 flex items-center justify-center hover:text-cyan-400 hover:border-cyan-400 transition"><i class="fas fa-envelope"></i></a>
+        </div>
+      </div>
     </div>
 
-    <!-- Footer Bottom Section -->
-    <div class="container mx-auto pt-4">
-        <div class="border-t-2 border-gray-700"></div>
-        <div class="text-center text-sm mt-4">
-            &copy; 2024 SUGAVANESWARAN. All Rights Reserved.
-        </div>
+    <div class="text-center text-slate-500 text-sm pb-6">
+      © 2026 SUGAVANESWARAN R. All Rights Reserved.
     </div>
-</footer>
+  </footer>
 
+  <script>
+    const menuBtn = document.getElementById("menuBtn");
+    const mobileMenu = document.getElementById("mobileMenu");
 
-
-
-
+    menuBtn.addEventListener("click", () => {
+      mobileMenu.classList.toggle("hidden");
+    });
+  </script>
 
 </body>
-
 </html>
-
-
-
-
-
-
-
